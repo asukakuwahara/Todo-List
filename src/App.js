@@ -27,7 +27,7 @@ function App() {
     const title = e.target.elements.title.value;
     const desc = e.target.elements.desc.value;
     const due = e.target.elements.due.value;
-    if ((title, desc, due)) {
+    if (title && desc && due) {
       addTodo(title, desc, due);
       setError(false);
     } else {

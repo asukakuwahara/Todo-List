@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import "../styles/Todos.css";
 
-const Todos = ({ todos, submitHandler, error }) => {
+const Todos = ({ todos, submitHandler, error, deleteTodo }) => {
   const todoList = todos.length ? (
     todos.map(todo => {
       return (
-        <div className="todo-item" key={todo.id}>
-          <button>X</button>
+        <div className="todo-item" key={todo.date}>
+          <button
+            onClick={e => {
+              deleteTodo(todo);
+            }}
+            className="delete"
+          >
+            X
+          </button>
           <p>{todo.title}</p>
           <p>{todo.desc}</p>
           <p>Status: {todo.done ? <>Done!</> : <>Pending</>}</p>

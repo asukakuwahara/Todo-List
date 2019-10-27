@@ -34,9 +34,20 @@ function App() {
       setError(true);
     }
   };
+
+  const deleteTodo = clickedTodo => {
+    const filteredTodos = todos.filter(todo => todo.date !== clickedTodo.date);
+    setTodos(filteredTodos);
+  };
+
   return (
     <div className="App">
-      <Todos todos={todos} submitHandler={submitHandler} error={error} />
+      <Todos
+        todos={todos}
+        submitHandler={submitHandler}
+        error={error}
+        deleteTodo={deleteTodo}
+      />
     </div>
   );
 }

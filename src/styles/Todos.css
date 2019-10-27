@@ -1,0 +1,35 @@
+.todo-form {
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+}
+button.submit {
+  background: orange;
+  border: none;
+  color: #fff;
+  border-radius: 20%;
+  margin-left: 1rem;
+}
+.todos-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-item {
+  margin-left: 25%;
+  margin-top: 3rem;
+  background: #fff;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+button.delete {
+  border: none;
+  background: transparent;
+  text-align: end;
+}
+.error {
+  color: red;
+}

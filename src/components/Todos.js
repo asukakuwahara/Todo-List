@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Todos.css";
 
 const Todos = ({ todos, submitHandler, error, deleteTodo }) => {
